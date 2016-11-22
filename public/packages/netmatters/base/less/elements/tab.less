@@ -1,0 +1,64 @@
+/**
+ *---------------------------------------------------------------
+ * TABS
+ *---------------------------------------------------------------
+*/
+.nav-tabs {
+    border-color: @border-color;
+    > li {
+        > a {
+            border-radius: @panel-border-radius @panel-border-radius 0 0;
+            border-bottom-color: @border-color;
+        }
+        &:hover > a,
+        &.active > a,
+        &.active > a:hover {
+            border-color: @border-color;
+        }
+        &.active > a {
+            background-color: #FFF;
+            border: 1px solid @nav-tabs-border-color;
+            border-bottom-color: #FFF !important;
+        }
+    }
+
+    .nav-tabs-alt & {
+        &.nav-justified {
+            > li {
+                display: table-cell;
+                width: 1%;
+            }
+        }
+        > li {
+            > a {
+                border-radius: 0;
+                border-color: transparent !important;
+                background: transparent !important;
+                border-bottom-color: @border-color !important;
+            }
+            &.active {
+                > a {
+                    border-bottom-color: @brand-primary !important;
+                }
+            }
+        }
+        li {
+            span,
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.tab-container {
+    margin-bottom: 15px;
+
+    .tab-content {
+        padding: 15px;
+        background-color: #fff;
+        border: 1px solid @border-color;
+        border-top-width: 0;
+        border-radius: 0 0 @panel-border-radius @panel-border-radius;
+    }
+}

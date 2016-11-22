@@ -1,0 +1,57 @@
+/**
+* ---------------------------------------------------------------
+* VARIABLES AND MIXINS
+* ---------------------------------------------------------------
+* Include frontend variables
+*/
+
+    @import "../../../packages/netmatters/base/less/bootstrap/variables.less";
+    @import "../variables/frontend.less";
+    @import "../../../packages/netmatters/base/less/bootstrap/mixins.less";
+
+
+
+/**
+*---------------------------------------------------------------
+* NEWS STYLES
+*---------------------------------------------------------------
+*/
+
+    #post {
+        .owl-nav {
+            display: none;
+        }
+
+        .owl-dots {
+            text-align: center;
+
+            .owl-dot {
+                background: @gray;
+                height: 10px;
+                width: 10px;
+                display: inline-block;
+                overflow: hidden;
+                text-indent: 9999px;
+                cursor: pointer;
+                margin: 20px 4px 0 4px;
+
+                &.active {
+                    background-color: @brand-primary;
+                }
+            }
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .image-slider {
+            .slide {
+                display: none;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+    }

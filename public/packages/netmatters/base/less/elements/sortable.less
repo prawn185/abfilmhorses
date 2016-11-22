@@ -1,0 +1,94 @@
+/**
+ *---------------------------------------------------------------
+ * SORTABLE
+ *---------------------------------------------------------------
+*/
+.sortable-dragging {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+    min-width: 350px;
+}
+
+.sortable li {
+    display: block;
+    margin: 5px 0;
+}
+
+.sortable li span.move {
+    cursor: move !important;
+}
+
+.sortable li span {
+    line-height: 24px;
+}
+
+.sortable li {
+    line-height: 34px;
+}
+
+.sortable li ul li {
+    margin-left:10px;
+    border:0;
+    padding:0;
+}
+
+.sortable li ul li ul li {
+    margin-left:10px;
+}
+
+
+.sortable .list-sub-item {
+    line-height: 34px;
+    margin:5px 0;
+    border:0;
+    overflow:hidden;
+    background-color:#EBEBEB;
+
+}
+
+.sortable li.sortable-placeholder {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border: 2px dashed @white-dark;
+    background: @gray-lighter;
+    padding: 20px
+}
+
+.sortable li.sortable-placeholder:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -10px;
+    left: -10px;
+    top: 50%;
+    border: 5px solid transparent;
+    border-left-color: red;
+    border-right: none;
+}
+
+/**
+ *---------------------------------------------------------------
+ * SORTABLE ACTIONS
+ *---------------------------------------------------------------
+*/
+.sortable .sort-actions {
+    float: right;
+    color: #888;
+}
+
+.sortable .sort-order {
+    margin-right: 5px;
+}
+
+.sortable .sort-move {
+    color: #fff;
+
+}
+
+.sortable .sort-remove {
+
+}

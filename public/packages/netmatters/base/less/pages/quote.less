@@ -1,0 +1,111 @@
+@import "../bootstrap/variables";
+
+// Quote form navigation steps
+.quote-form-steps {
+    margin: 0 -15px 20px;
+
+    ul {
+        display: table;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        text-align: center;
+        display: table-cell;
+        padding: 0 10px;
+    }
+
+    ul li .step {
+        margin: 0 auto;
+        display: block;
+        padding: 0 10px;
+        color: #fff;
+        height: 45px;
+        line-height: 45px;
+        text-transform: uppercase;
+        background-color: #cccccc;
+        text-decoration: none;
+        position: relative;
+    }
+
+    ul li.disabled {
+        opacity: 0.3;
+    }
+
+    ul li.active .top {
+        border-top: 22px solid @brand-danger;
+        border-left: 10px solid rgba(0, 0, 0, 0);
+    }
+
+    ul li.active .bottom {
+        border-bottom: 22px solid @brand-danger;
+        border-left: 10px solid rgba(0, 0, 0, 0);
+    }
+
+    ul li.active .step {
+        background-color: @brand-danger;
+    }
+
+    ul li.active:not(.target) .step::after {
+        border-left-color: @brand-danger;
+    }
+
+    ul li:first-child .step {
+        border-radius: 0px;
+    }
+
+    ul li:not(.target) .step::after {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 22.5px 0 22.5px 10px;
+        border-color: transparent transparent transparent #ccc;
+    }
+
+    ul li.target .step {
+        border-radius: 0;
+        background-color: @brand-success;
+    }
+
+    ul li .top,
+    ul li .bottom {
+        position: absolute;
+        left: -10px;
+        width: 0;
+        height: 0;
+        display: block;
+    }
+
+    ul li .top {
+        border-top: 22px solid #ccc;
+        border-left: 10px solid transparent;
+    }
+
+    ul li .bottom {
+        bottom: 0;
+        border-bottom: 22px solid #ccc;
+        border-left: 10px solid transparent;
+    }
+
+    ul li.target .top {
+        border-top-color: @brand-success;
+    }
+
+    ul li.target .bottom {
+        border-bottom-color: @brand-success;
+    }
+}
+
+
+// Email select dropdown
+.selectize-dropdown-content .label {
+    color: inherit;
+    font-size: 100%;
+}
+

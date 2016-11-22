@@ -1,0 +1,9 @@
+#!/bin/bash
+
+bash scripts/assets.sh
+
+npm install gulp -g
+npm update
+npm install bower -g
+bower update
+gulp

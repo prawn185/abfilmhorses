@@ -1,0 +1,68 @@
+
+/**
+ * ---------------------------------------------------------------
+ * VARIABLES AND MIXINS
+ * ---------------------------------------------------------------
+ * These need to be loaded first and in this order
+ * 1. bootstrap variables
+ * 2. frontend variables (override bootstrap variables)
+ * 3. bootstrap mixins
+ */
+@import "../../../packages/netmatters/base/less/bootstrap/variables.less";
+@import "../variables/frontend.less";
+@import "../../../packages/netmatters/base/less/bootstrap/mixins.less";
+
+
+/**
+ * ---------------------------------------------------------------
+ * BOOTSTRAP FILES
+ * ---------------------------------------------------------------
+ * If there are any elements that you do not require
+ * for your project comment them out bellow
+ */
+
+// Reset
+@import "../../../packages/netmatters/base/less/bootstrap/normalize.less";
+@import "../../../packages/netmatters/base/less/bootstrap/print.less";
+
+// Core CSS
+@import "../../../packages/netmatters/base/less/bootstrap/scaffolding.less";
+@import "../../../packages/netmatters/base/less/bootstrap/type.less";
+@import "../../../packages/netmatters/base/less/bootstrap/code.less";
+@import "../../../packages/netmatters/base/less/bootstrap/grid.less"; /* Delete? */
+@import "../../../packages/netmatters/base/less/bootstrap/tables.less";
+@import "../../../packages/netmatters/base/less/bootstrap/forms.less";
+@import "../../../packages/netmatters/base/less/bootstrap/buttons.less";
+
+// Components
+@import "../../../packages/netmatters/base/less/bootstrap/component-animations.less";
+@import "../../../packages/netmatters/base/less/bootstrap/glyphicons.less";
+@import "../../../packages/netmatters/base/less/bootstrap/dropdowns.less";
+@import "../../../packages/netmatters/base/less/bootstrap/button-groups.less";
+@import "../../../packages/netmatters/base/less/bootstrap/input-groups.less";
+@import "../../../packages/netmatters/base/less/bootstrap/navs.less";
+@import "../../../packages/netmatters/base/less/bootstrap/navbar.less";
+@import "../../../packages/netmatters/base/less/bootstrap/breadcrumbs.less";
+@import "../../../packages/netmatters/base/less/bootstrap/pagination.less";
+@import "../../../packages/netmatters/base/less/bootstrap/pager.less";
+@import "../../../packages/netmatters/base/less/bootstrap/labels.less";
+@import "../../../packages/netmatters/base/less/bootstrap/badges.less";
+@import "../../../packages/netmatters/base/less/bootstrap/jumbotron.less";
+@import "../../../packages/netmatters/base/less/bootstrap/thumbnails.less";
+@import "../../../packages/netmatters/base/less/bootstrap/alerts.less";
+@import "../../../packages/netmatters/base/less/bootstrap/progress-bars.less";
+@import "../../../packages/netmatters/base/less/bootstrap/media.less";
+@import "../../../packages/netmatters/base/less/bootstrap/list-group.less";
+@import "../../../packages/netmatters/base/less/bootstrap/panels.less";
+@import "../../../packages/netmatters/base/less/bootstrap/wells.less";
+@import "../../../packages/netmatters/base/less/bootstrap/close.less";
+
+// Components w/ JavaScript
+@import "../../../packages/netmatters/base/less/bootstrap/modals.less";
+@import "../../../packages/netmatters/base/less/bootstrap/tooltip.less";
+@import "../../../packages/netmatters/base/less/bootstrap/popovers.less";
+@import "../../../packages/netmatters/base/less/bootstrap/carousel.less";
+
+// Utility classes
+@import "../../../packages/netmatters/base/less/bootstrap/utilities.less";
+@import "../../../packages/netmatters/base/less/bootstrap/responsive-utilities.less";  /* Delete? */

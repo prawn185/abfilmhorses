@@ -1,0 +1,309 @@
+
+/**
+ *---------------------------------------------------------------
+ * CHECKOUT STYLES
+ *---------------------------------------------------------------
+*/
+
+    .wizard{
+
+    }
+
+    .wizard-title {
+        margin-bottom: 20px;
+    }
+
+    span.require {
+        color: #E94D1C;
+    }
+
+    /* Navigation */
+    .wizard-nav{
+
+    }
+
+    /* Steps */
+    #order-steps {
+        margin: 0px -10px 0 -10px;
+    }
+    #order-steps ul {
+        display: table;
+        width: 100%;
+        margin: 0;
+    }
+
+    #order-steps ul li {
+        text-align: center;
+        display: table-cell;
+        padding: 0 10px;
+        width: 25%;
+    }
+    #order-steps ul li .step {
+        margin: 0 auto;
+        display: block;
+        padding: 0 10px;
+        color: #fff;
+        height: 45px;
+        line-height: 45px;
+        text-transform: uppercase;
+        background-color: #cccccc;
+        text-decoration: none;
+        position: relative;
+    }
+
+    #order-steps ul li.active .top {
+        top: 0;
+        border-top: 22px solid #428bca;
+        border-left: 10px solid rgba(0,0,0,0);
+    }
+    #order-steps ul li.active .bottom {
+        border-bottom: 22px solid #428bca;
+        border-left: 10px solid rgba(0,0,0,0);
+    }
+
+    #order-steps ul li.active .step {
+        background-color: #428bca;
+    }
+    #order-steps ul li.active:not(.target) .step::after {
+        border-left-color: #428bca;
+    }
+    #order-steps ul li:first-child .step {
+        border-radius: 4px 0 0 4px;
+    }
+
+    #order-steps ul li:not(.target) .step::after {
+        position: absolute;
+        top: 0;
+        right: -10px;
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 22.5px 0 22.5px 10px;
+        border-color: transparent transparent transparent #ccc;
+    }
+
+    #order-steps ul li.target .step {
+        border-radius: 0 4px 4px 0;
+        background-color: #f0ad4e;
+    }
+    #order-steps ul li .top,
+    #order-steps ul li .bottom {
+        position: absolute;
+        left: -10px;
+        width: 0;
+        height: 0;
+        display: block;
+    }
+
+    #order-steps ul li .top {
+        top: 0;
+        border-top: 22px solid #ccc;
+        border-left: 10px solid transparent;
+    }
+    #order-steps ul li .bottom {
+        bottom: 0;
+        border-bottom: 22px solid #ccc;
+        border-left: 10px solid transparent;
+    }
+
+
+    #order-steps ul li.target .top {
+        border-top-color: #f0ad4e;
+    }
+    #order-steps ul li.target .bottom {
+        border-bottom-color: #f0ad4e;
+    }
+
+
+    /* Wizard Content */
+    .wizard .wizard-content {
+        min-height: 200px;
+        padding:40px 0;
+    }
+
+    .wizard .wizard-bar {
+        margin-bottom: 20px;
+    }
+
+    .wizard .wizard-actions {
+        float:right;
+        text-align: right;
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * CART STYLES
+ *---------------------------------------------------------------
+*/
+    .order-details{
+        margin-bottom: 30px;
+    }
+    .order-block{
+        padding: 10px 20px;
+        background: #F2F2F2;
+        margin-bottom: 20px;
+    }
+
+    #main .cart-title{
+        margin-bottom:40px;
+    }
+        #main .cart-title h1{
+            margin:0;
+            padding: 0;
+            font-size: 28px;
+        }
+
+    #main .cart-contents{
+        margin-bottom:40px;
+    }
+        #main .cart-contents .table{
+            margin:0;
+            padding: 0;
+        }
+        #main .cart-contents .item-image{
+
+        }
+        #main .cart-contents .item-name{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #main .cart-contents .item-options{
+            font-size:12px;
+            color: #888;
+        }
+            #main .cart-contents .item-options ul{
+                margin:0;
+            }
+
+        #main .cart-contents .item-qty{
+
+        }
+        #main .cart-contents .item-sku{
+
+        }
+        #main .cart-contents .item-price{
+
+        }
+        #main .cart-contents .item-subtotal{
+
+        }
+        #main .cart-contents .item-actions{
+            text-align: right;
+        }
+
+    #main .cart-totals{
+        margin-bottom:20px;
+    }
+        #main .cart-totals .cart-discount{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #main .cart-totals .cart-discount strong{
+            display: block;
+            margin-bottom:10px;
+        }
+
+        #main .cart-totals ul{
+            padding: 10px 20px;
+            background: #F2F2F2;
+            margin-bottom: 20px;
+        }
+        #main .cart-totals li{
+            font-size: 16px;
+            width: 100%;
+            overflow: hidden;
+            padding: 8px 0;
+            text-align: right;
+            border-bottom: solid 1px #bbb;
+        }
+        #main .cart-totals li:last-child{
+            border-bottom: none;
+        }
+
+        #main .cart-totals li em{
+            float:left;
+            text-align: left;
+            margin-right: 100px;
+        }
+        #main .cart-totals li .total {
+            font-size: 25px;
+        }
+
+    #main .cart-actions{
+        margin-bottom: 40px;
+        border-top: 1px solid #DDD;
+        padding-top: 20px;
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * SMALL MOBILE - Max Width: 480px breakpoint 30em
+ *---------------------------------------------------------------
+*/
+    @media only screen and (max-width: 480px)
+    {
+
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * MOBILE - Min Width: 600px breakpoint 38em
+ *---------------------------------------------------------------
+*/
+    @media only screen and (min-width: 600px) {
+
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * TABLET - Min Width: 768px breakpoint 48em
+ *---------------------------------------------------------------
+*/
+    @media only screen and (min-width: 768px) {
+
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * SMALL DESKTOP- Min Width: 992px breakpoint 62em
+ *---------------------------------------------------------------
+*/
+    @media only screen and (min-width: 992px) {
+
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Min Width: 1382px breakpoint 86em
+ *---------------------------------------------------------------
+*/
+    @media only screen and (min-width: 1382px) {
+
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Retina Display
+ *---------------------------------------------------------------
+*/
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+
+
+    }
+
+    @media print,(-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi) {
+
+
+    }

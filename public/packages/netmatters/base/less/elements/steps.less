@@ -1,0 +1,118 @@
+
+/**
+ *---------------------------------------------------------------
+ * STEPS STYLES
+ *---------------------------------------------------------------
+*/
+#steps .step {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    line-height: 30px;
+    background-color: #3498db;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    min-height: 250px;
+    max-height: 335px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+#steps.extended-min-height .step {
+    min-height: 350px;
+    max-height: 100%;
+}
+
+#steps .step h3 {
+    margin: 0 0 16px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#steps .step a {
+    color: #fff;
+}
+
+#steps,
+#steps > .row,
+#steps > .row > div {
+    height: 100%;
+}
+
+
+#steps .step.green {
+    background-color: #1abc9c;
+}
+
+#steps .step.red {
+    background-color: #e74c3c;
+}
+
+
+#steps .step.icon-print {
+    background-image: url(../images/icons/print.png);
+}
+
+#steps .step.icon-files {
+    background-image: url(../images/icons/file.png);
+}
+
+#steps .step.icon-order {
+    background-image: url(../images/icons/order.png);
+}
+
+#steps .step.icon-timing {
+    background-image: url(../images/icons/timing.png);
+}
+
+#steps .step.icon-brief {
+    background-image: url(../images/icons/brief.png);
+}
+
+
+#steps .step .button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: block;
+    height: 44px;
+    line-height: 38px;
+    float: left;
+    padding: 0 20px;
+    border: 3px solid #fff;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: all .5s;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#steps .step .button:hover {
+    background-color: #fff;
+    color: #3498db;
+}
+
+#steps .step.red .button:hover {
+    color: #e74c3c;
+}
+
+#steps .step.green .button:hover {
+    color: #1abc9c;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * MOBILE - Min Width: 600px
+ *---------------------------------------------------------------
+*/
+@media only screen and (max-width: 768px) {
+    #steps.extended-min-height .step {
+        min-height: 250px;
+        max-height: 100%;
+    }
+}

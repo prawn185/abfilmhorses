@@ -1,0 +1,88 @@
+/**
+ *---------------------------------------------------------------
+ * LEFT MENU STYLES
+ *---------------------------------------------------------------
+*/
+
+    #sidebar {
+        .title {
+            > .row {
+                margin: 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    background-color: @white;
+                    height: 20px;
+                    width: 6px;
+                    z-index: 1;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+
+                > div {
+                    padding: 0;
+                    background-color: @blue;
+                    height: 5px;
+
+                    &:first-child {
+                        background-color: @red;
+                    }
+                }
+            }
+
+            h2 {
+                line-height: 52px;
+                text-transform: uppercase;
+                font-size: 15px;
+                margin: 0;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            > li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                > a {
+                    background-color: @blue;
+                    display: block;
+                    color: fade(@white, 60%);
+                    padding: 0 20px;
+                    line-height: 45px;
+                    text-decoration: none;
+                    transition: all .5s;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                &.active,
+                &:hover {
+                    a {
+                        color: @white;
+                        background-color: darken(@blue, 10%);
+                        border-left: 5px solid @red;
+                    }
+                }
+
+                & + li {
+                    a {
+                        &::before {
+                            display: block;
+                            content: "";
+                            margin: 0 -20px;
+                            border-top: 1px solid darken(@blue, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -1,0 +1,410 @@
+
+/**
+ *---------------------------------------------------------------
+ * PANEL
+ *---------------------------------------------------------------
+*/
+.panel {
+    border-radius: 2px;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL HEADING
+ *---------------------------------------------------------------
+*/
+.panel-default > .panel-heading,
+.panel-default > .panel-footer {
+    border-color: #EDF1F2;
+}
+.panel-default > .panel-heading {
+    padding: 10px 15px;
+}
+.panel > .panel-heading:after,
+.panel > .panel-heading:before {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.panel > .panel-heading:after {
+    clear: both;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL CAPTION
+ *---------------------------------------------------------------
+*/
+.panel > .panel-heading > .caption {
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+}
+.panel > .panel-heading > .caption > i {
+    float: left;
+    margin-top: 4px;
+    display: inline-block !important;
+    font-size: 13px;
+    margin-right: 5px;
+    color: @gray;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL SWITCH
+ *---------------------------------------------------------------
+*/
+.panel-heading .switch-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL TOOLS
+ *---------------------------------------------------------------
+*/
+.panel > .panel-heading > .tools,
+.panel > .panel-heading > .actions
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+.panel > .panel-heading > .tools > a {
+    display: inline-block;
+    margin-left:5px;
+    color: #777;
+}
+.panel > .panel-heading > .tools > a:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    color: #6F5499;
+}
+.panel > .panel-heading > .tools > a.remove {
+
+}
+.panel > .panel-heading > .tools > a.config {
+
+}
+.panel > .panel-heading > .tools > a.reload {
+
+}
+.panel > .panel-heading > .tools > a.expand {
+
+}
+.panel > .panel-heading > .tools > a.collapse {
+
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL ACTIONS
+ *---------------------------------------------------------------
+*/
+.panel-heading.has-pretty {
+    padding: 5px 15px 0 15px;
+}
+.panel-heading.has-pretty span {
+    margin: 5px 0 0 0;
+    display: inline-block;
+}
+.panel-heading.has-pretty label,
+.panel-heading.has-pretty label {
+    font-weight: normal;
+    margin: 5px 5px 0 2px;
+}
+.panel-heading.has-actions {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    line-height: 30px;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL BODY
+ *---------------------------------------------------------------
+*/
+.panel-body{
+    clear: both;
+    position: relative;
+}
+.panel-body label{
+    color: @gray;
+}
+.panel > .panel-body.has-tiny {
+    padding: 0;
+    .form-group {
+        margin-bottom: 0;
+    }
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL BODY TABLE
+ *---------------------------------------------------------------
+*/
+.panel-body .table-title{
+    padding: 10px 0;
+}
+.panel-body .table-title h3{
+    margin:0;
+    padding:0;
+}
+.panel-default > .table th{
+    border-bottom:1px solid @white-dark;
+}
+
+.panel-body .table.no-padding{
+    margin:0;
+    padding:0;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL NO RESULTS
+ *---------------------------------------------------------------
+*/
+.panel .no-results {
+    text-align: center;
+
+    h3 {
+        margin: 25px;
+    }
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * PANEL BODY COLOURS
+ *---------------------------------------------------------------
+*/
+// Blue
+.panel > .panel-body.blue,
+.panel > .panel-heading.blue,
+.panel.blue {
+    color: @white;
+    background-color: @blue !important;
+}
+
+// Red
+.panel > .panel-body.red,
+.panel > .panel-heading.red,
+.panel.red {
+    color: @white;
+    background-color: @red !important;
+}
+
+// Yellow
+.panel > .panel-body.yellow,
+.panel > .panel-heading.yellow,
+.panel.yellow {
+    color: @white;
+    background-color: @yellow !important;
+}
+
+// Green
+.panel > .panel-body.green,
+.panel > .panel-heading.green,
+.panel.green {
+    color: @white;
+    background-color: @green !important;
+}
+
+// Purple
+.panel > .panel-body.purple,
+.panel > .panel-heading.purple,
+.panel.purple {
+    color: @white;
+    background-color: @purple !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * MODAL PANEL
+ *---------------------------------------------------------------
+*/
+.modal-body .panel{
+    margin-bottom: 20px;
+    background-color: none;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.modal-body .panel-default > .panel-heading {
+    background: @white-lighter;
+    padding: 10px 15px;
+    border: none;
+}
+.modal-body .panel-default > .panel-body {
+    padding: 15px;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * MISC
+ *---------------------------------------------------------------
+*/
+/* Dashboard Widgets */
+#featured-widgets{
+    margin-bottom: 20px;
+}
+
+/* Sortable Panels */
+.sortable .panel > .panel-heading {
+    cursor: move;
+}
+
+.panel-text-area {
+    margin: -1px;
+}
+
+.title-btn-sm {
+    line-height: 30px;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * SMALL MOBILE - Max Width: 480px breakpoint 30em
+ *---------------------------------------------------------------
+*/
+@media only screen and (max-width: 480px)
+{
+    /* Fix tables and datatables on mobile */
+    .panel-body .table{
+        margin: -15px;
+    }
+    .panel-body .dataTables_wrapper{
+        margin: -15px;
+    }
+    .panel-body .dataTables_wrapper .table{
+        margin: 0;
+    }
+    .panel-body .dataTables_header{
+        margin-bottom: 0;
+    }
+
+    .dataTables_header select {
+        border-radius:0;
+    }
+
+    .panel-body .dataTables_footer{
+        margin-bottom: -15px;
+        padding-bottom: 15px;
+    }
+
+    .table td.actions{
+        width: 150px !important;
+    }
+    .table td.actions .btn-group{
+        width: 120px !important;
+    }
+
+    div.dataTables_length,
+    div.dataTables_filter,
+    div.dataTables_info,
+    .pagination{
+        float: left;
+        display: inline-block;
+        width: 300px;
+        text-align: left;
+    }
+
+    div.dataTables_filter input{
+        width: 80%;
+    }
+    div.dataTables_filter label,
+    div.dataTables_paginate{
+        float:left;
+    }
+    div.dataTables_paginate{
+        margin-top:10px;
+    }
+
+    div.dataTables_filter{
+        float:left;
+    }
+    .pagination > li > a,
+    .pagination > li > span{
+        padding: 3px 6px;
+    }
+    .actions .btn{
+        padding: 4px 10px;
+    }
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * MOBILE - Min Width: 600px breakpoint 38em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 600px) {
+
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * TABLET - Min Width: 768px breakpoint 48em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 768px) {
+
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * SMALL DESKTOP- Min Width: 992px breakpoint 62em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 992px) {
+
+
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Min Width: 1382px breakpoint 86em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 1382px) {
+
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Retina Display
+ *---------------------------------------------------------------
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+
+}

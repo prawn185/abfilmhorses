@@ -1,0 +1,49 @@
+/**
+ * List group styles
+ */
+.list-group {
+    .fa,
+    .md,
+    .glyphicon {
+        margin-right: 5px;
+    }
+    .btn {
+        &[class^="btn-radio"],
+        &[class^="btn-checkbox"],
+        &[class*=" btn-radio"],
+        &[class*=" btn-checkbox"] {
+            padding: 0;
+        }
+    }
+}
+
+
+/**
+ * List group item styles
+ */
+.list-group-item {
+    color: #555555;
+
+    &.focus,
+    &.focus:hover,
+    &.focus:focus {
+        background-color: #F5F5F5;
+
+        .list-group-item-heading {
+            color: inherit;
+        }
+        .list-group-item-text {
+            opacity: .75;
+        }
+    }
+}
+
+
+/**
+ * Tags list
+ */
+.tags-list {
+    .btn {
+        margin-bottom: 3px;
+    }
+}

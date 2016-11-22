@@ -1,0 +1,140 @@
+/**
+ *---------------------------------------------------------------
+ * NOTES
+ *---------------------------------------------------------------
+*/
+//    .note {
+//        margin: 0 0 20px 0;
+//        padding: 15px 30px 15px 15px;
+//        border-left: 5px solid @gray-lighter;
+//    }
+.note h1,
+.note h2,
+.note h3,
+.note h4 {
+    margin-top: 0;
+}
+
+.note p:last-child {
+    margin-bottom: 0;
+}
+
+.note code,
+.note .highlight {
+    background-color: @white;
+}
+
+.note-success {
+    background-color: @brand-success;
+    border-color: darken(@brand-success, 5%);
+}
+
+.note-info {
+    background-color: @brand-info;
+    border-color: darken(@brand-info, 5%);
+}
+
+.note-warning {
+    background-color: @brand-warning;
+    border-color: darken(@brand-warning, 5%);
+}
+
+.note-danger {
+    background-color: @brand-danger;
+    border-color: darken(@brand-danger, 5%);
+}
+
+/**
+*---------------------------------------------------------------
+* NOTES
+*---------------------------------------------------------------
+*/
+
+#notes {
+    .add-note {
+        margin-bottom: 10px;
+        border: 1px solid #DEE5E7;
+
+        .note-box {
+            padding: 10px;
+            background: #F6F8F8;
+        }
+        .note-actions {
+            padding: 10px;
+            background: #FFF;
+        }
+    }
+
+    .view-notes {
+        max-height: 550px;
+        overflow: auto;
+        margin-bottom: 20px;
+
+        .note {
+            .note-thumb {
+                border: 1px solid @brand-primary;
+                display: block;
+                height: 40px;
+                border-radius: 50% !important;
+            }
+            .note-title {
+                padding: 10px 10px 0 10px;
+                font-weight: bold;
+            }
+            .note-description {
+                padding: 10px;
+                color: lighten(@text-color, 10%);
+            }
+
+            code,
+            .highlight {
+                background-color: @white;
+            }
+            .note-success {
+                background-color: @brand-success;
+                border-color: darken(@brand-success, 5%);
+            }
+            .note-info {
+                background-color: @brand-info;
+                border-color: darken(@brand-info, 5%);
+            }
+            .note-warning {
+                background-color: @brand-warning;
+                border-color: darken(@brand-warning, 5%);
+            }
+            .note-danger {
+                background-color: @brand-danger;
+                border-color: darken(@brand-danger, 5%);
+            }
+            .arrow.left {
+                top: 20px;
+            }
+
+        }
+    }
+
+    .tall-notes {
+
+        background-color: #fff;
+
+        .add-note {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border: 0;
+            border-bottom: 1px solid @border-color;
+
+            .note-box {
+                padding: 0;
+                background: #FFF;
+            }
+            .note-actions {
+                padding: 0;
+                background: #FFF;
+            }
+        }
+
+    }
+}
+
+
+

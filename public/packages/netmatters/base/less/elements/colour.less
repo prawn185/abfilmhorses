@@ -1,0 +1,246 @@
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: GRADIENT
+ *---------------------------------------------------------------
+ */
+.bg-gd{
+    #gradient > .vertical(rgba(40,50,60,0), rgba(40,50,60,0.075), 0, 100%);
+    filter:none;
+}
+
+.bg-gd-dk{
+    #gradient > .vertical(rgba(40,50,60,0), rgba(40,50,60,0.5), 10%, 100%);
+    filter:none;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: OPACITY
+ *---------------------------------------------------------------
+ */
+.bg-white-opacity{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.bg-black-opacity{
+    background-color: rgba(32, 43, 54, 0.5);
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: BG OVERRIDE
+ *---------------------------------------------------------------
+ */
+.bg-override {
+    background-image: none !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: WHITE
+ *---------------------------------------------------------------
+ */
+.bg-light {
+    .color-variant(@brand-light, 2%, 3%, 3%, 5%);
+    color: @text-color;
+}
+a.bg-light{
+    &:hover{
+        color: @link-color;
+    }
+}
+
+.bg-white {
+    background-color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+.bg-white-only{background-color:#fff;}
+.border-white {
+    border-color: #FFFFFF !important;
+}
+.txt-white {
+    color: #FFFFFF !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: GREY
+ *---------------------------------------------------------------
+ */
+.bg-grey {
+    background-color: #AAAAAA !important;
+    background-color: rgba(170, 170, 170, 0.5) !important;
+}
+
+.border-grey {
+    border-color: #AAAAAA !important;
+}
+
+.txt-grey {
+    color: #AAAAAA !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: DARK
+ *---------------------------------------------------------------
+ */
+.bg-black {
+    .color-variant(@brand-black, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-black, lighten(@brand-black,40%), lighten(@brand-black,50%), #fff);
+}
+
+.bg-dark {
+    background-color: #555555 !important;
+    background-color: rgba(85, 85, 85, 0.5) !important;
+}
+.border-dark {
+    border-color: #555555 !important;
+}
+.txt-dark {
+    color: #555555 !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: BLUE
+ *---------------------------------------------------------------
+ */
+.bg-blue {
+    background-color: #4b8df8 !important;
+    background-color: rgba(75, 141, 248, 0.5) !important;
+}
+
+.border-blue {
+    border-color: #4b8df8 !important;
+}
+
+.txt-blue {
+    color: #4b8df8 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: RED
+ *---------------------------------------------------------------
+ */
+.bg-red {
+    background-color: #e02222 !important;
+    background-color: rgba(224, 34, 34, 0.5) !important;
+}
+
+.border-red {
+    border-color: #e02222 !important;
+}
+
+.txt-red {
+    color: #e02222 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: ORANGE
+ *---------------------------------------------------------------
+ */
+.bg-orange {
+    background-color: #F9A123 !important;
+    background-color: rgba(249, 161, 35, 0.5) !important;
+}
+
+.border-orange {
+    border-color: #F9A123 !important;
+}
+
+.txt-orange {
+    color: #F9A123 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: YELLOW
+ *---------------------------------------------------------------
+ */
+.bg-yellow {
+    background-color: #FFF333 !important;
+    background-color: rgba(255, 243, 51, 0.5) !important;
+}
+
+.border-yellow {
+    border-color: #FFF333 !important;
+}
+
+.txt-yellow {
+    color: #FFF333 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: GREEN
+ *---------------------------------------------------------------
+ */
+.bg-green {
+    background-color: #008A2E !important;
+    background-color: rgba(0, 138, 46, 0.5) !important;
+}
+
+.border-green {
+    border-color: #008A2E !important;
+}
+
+.txt-green {
+    color: #008A2E !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: PURPLE
+ *---------------------------------------------------------------
+ */
+.bg-purple {
+    background-color: #852b99 !important;
+    background-color: rgba(133, 43, 153, 0.5) !important;
+}
+
+.border-purple {
+    border-color: #852b99 !important;
+}
+
+.txt-purple {
+    color: #852b99 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * COLOURS: DEFAULT
+ *---------------------------------------------------------------
+ */
+.bg-primary {
+    .color-variant(@brand-primary, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-primary, lighten(@brand-primary,40%), lighten(@brand-primary,50%), #fff);
+}
+
+.bg-success {
+    .color-variant(@brand-success, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-success, lighten(@brand-success,40%), lighten(@brand-success,50%), #fff);
+}
+
+.bg-info {
+    .color-variant(@brand-info, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-info, lighten(@brand-info,40%), lighten(@brand-info,50%), #fff);
+}
+
+.bg-warning {
+    .color-variant(@brand-warning, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-warning, lighten(@brand-warning,40%), lighten(@brand-warning,50%), #fff);
+}
+
+.bg-danger {
+    .color-variant(@brand-danger, 5%, 10%, 5%, 10%);
+    .font-variant(@brand-danger, lighten(@brand-danger,40%), lighten(@brand-danger,50%), #fff);
+}

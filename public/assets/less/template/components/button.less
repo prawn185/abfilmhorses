@@ -1,0 +1,174 @@
+
+/**
+ *---------------------------------------------------------------
+ * BUTTONS
+ *---------------------------------------------------------------
+*/
+    .btn {
+      border-width: 0px;
+      outline: none;
+      text-shadow: none;
+      border-radius: 2px;
+      height: 41px;
+      line-height: 41px;
+      padding: 0 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .btn .iconmoon {
+      position: relative;
+      top: 1px;
+      margin-left: 15px;
+    }
+
+    .btn:active {
+      border: 0;
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * CUSTOM BUTTONS
+ *---------------------------------------------------------------
+*/
+    /* Blue */
+    .btn.blue {
+      color: @white;
+      text-shadow: none;
+      background-color: @blue;
+      border-color: darken(@blue, 5%);
+    }
+    .btn.blue:hover,
+    .btn.blue:focus,
+    .btn.blue:active,
+    .btn.blue.active,
+    .btn.blue[disabled],
+    .btn.blue.disabled {
+      outline: none !important;
+      background-color: darken(@blue, 10%) !important;
+    }
+
+
+    /* Red */
+    .btn.red {
+      color: @white;
+      text-shadow: none;
+      background-color: @red;
+      border-color: darken(@red, 15%);
+    }
+
+    .btn.red:hover,
+    .btn.red:focus,
+    .btn.red:active,
+    .btn.red.active,
+    .btn.red[disabled],
+    .btn.red.disabled {
+      outline: none !important;
+    }
+
+    .btn.red:active,
+    .btn.red.active {
+      background-color: darken(@red, 5%);
+    }
+
+    /* Green */
+    .btn.green {
+      color: @white;
+      text-shadow: none;
+      background-color: @green;
+      border-color: darken(@green, 5%);
+    }
+    .btn.green:hover,
+    .btn.green:focus,
+    .btn.green:active,
+    .btn.green.active,
+    .btn.green[disabled],
+    .btn.green.disabled {
+      outline: none !important;
+      background-color: darken(@green, 10%) !important;
+    }
+
+
+    /* Purple */
+    .btn.purple {
+      color: @white;
+      text-shadow: none;
+      background-color: @purple;
+      border-color: darken(@purple, 5%);
+    }
+    .btn.purple:hover,
+    .btn.purple:focus,
+    .btn.purple:active,
+    .btn.purple.active,
+    .btn.purple[disabled],
+    .btn.purple.disabled {
+      outline: none !important;
+      background-color: darken(@purple, 10%) !important;
+    }
+
+
+    /* Yellow */
+    .btn.yellow {
+      color: @white;
+      text-shadow: none;
+      background-color: @yellow;
+      border-color: darken(@yellow, 5%);
+    }
+    .btn.yellow:hover,
+    .btn.yellow:focus,
+    .btn.yellow:active,
+    .btn.yellow.active,
+    .btn.yellow[disabled],
+    .btn.yellow.disabled {
+      outline: none !important;
+      background-color: darken(@yellow, 10%) !important;
+    }
+
+
+    /* Dark */
+    .btn.dark {
+      color: @white;
+      text-shadow: none;
+      background-color: @gray-darker;
+      border-color: darken(@gray-darker, 5%);
+    }
+    .btn.dark:hover,
+    .btn.dark:focus,
+    .btn.dark:active,
+    .btn.dark.active,
+    .btn.dark[disabled],
+    .btn.dark.disabled {
+      outline: none !important;
+      background-color: darken(@gray-darker, 10%) !important;
+    }
+
+
+/**
+ *---------------------------------------------------------------
+ * BUTTON STRIPES
+ *---------------------------------------------------------------
+*/
+    /* Buttons With left Strip */
+    .red-stripe {
+        border-left: 3px solid @red;
+    }
+    .blue-stripe {
+        border-left: 3px solid @blue;
+    }
+    .purple-stripe {
+        border-left: 3px solid @purple;
+    }
+    .green-stripe {
+        border-left: 3px solid @green;
+    }
+    .yellow-stripe {
+      border-left: 3px solid @yellow;
+    }
+    .grey-stripe {
+      border-left: 3px solid @gray;
+    }
+    .dark-stripe {
+      border-left: 3px solid @gray-darker;
+    }

@@ -1,0 +1,76 @@
+/**
+ *---------------------------------------------------------------
+ * BOOTSTRAP WIZARD
+ *---------------------------------------------------------------
+*/
+.wizard {
+    .navbar {
+        z-index: 998 !important;
+        background: @white;
+        border: 1px solid @white-dark;
+
+        li {
+            a {
+                .glyphicons {
+                    margin-right: 10px;
+                }
+            }
+            &.active{
+                font-weight: bold;
+            }
+            &.success {
+                a {
+                    color: #008A2E !important;
+                    background-color: rgba(0, 138, 46, 0.1);
+                    border-right: 1px solid rgba(0, 138, 46, 0.2);
+                }
+            }
+            &.error {
+                a {
+                    color: #E02222 !important;
+                    background-color: rgba(224, 34, 34, 0.1);
+                    border-right: 1px solid rgba(224, 34, 34, 0.2);
+                }
+            }
+        }
+        li:last-child {
+            a {
+                border-right: none;
+            }
+        }
+    }
+
+    .wizard-bar {
+        padding: 10px 15px;
+
+        .wizard-status {
+            padding-top: 3px;
+            color: @gray-light;
+
+            #status-text {
+                float: left;
+                margin-right: 10px;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 30px;
+            }
+            #bar {
+                margin-bottom: 0;
+                border: 1px solid #ccc;
+            }
+        }
+
+        .wizard-actions {
+            text-align: right;
+        }
+    }
+
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: @gray;
+    background-color: @white-light;
+    font-weight: normal;
+}

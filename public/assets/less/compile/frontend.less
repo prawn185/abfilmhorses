@@ -1,0 +1,39 @@
+
+/**
+ * ---------------------------------------------------------------
+ * VARIABLES AND MIXINS
+ * ---------------------------------------------------------------
+ * Include frontend variables
+ */
+
+    @import "../../../packages/netmatters/base/less/bootstrap/variables.less";
+    @import "../variables/frontend.less";
+    @import "../../../packages/netmatters/base/less/bootstrap/mixins.less";
+
+
+/**
+ * ---------------------------------------------------------------
+ * MAIN TEMPLATE
+ * ---------------------------------------------------------------
+ */
+
+    @import "../compile/frontend-fonts.less";
+    @import "../../../packages/netmatters/base/less/template/bug-fix.less";
+    @import "../template/main.less";
+
+
+/**
+ * ---------------------------------------------------------------
+ * NETMATTERS FILES
+ * ---------------------------------------------------------------
+ * If there are any elements that you do not require
+ * for your project comment them out bellow
+ */
+
+    // Pre-styled Elements
+    @import "../../../packages/netmatters/base/less/elements/login.less";
+    @import "../template/components/nav.less";
+    @import "../template/components/button.less";
+    @import "../template/components/form.less";
+    @import "../template/components/sidebar.less";
+

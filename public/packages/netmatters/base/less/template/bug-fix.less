@@ -1,0 +1,493 @@
+/**
+ *---------------------------------------------------------------
+ * HTML OVERRIDES
+ *---------------------------------------------------------------
+*/
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+/*
+Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't
+properly apply the media queries in Bootstrap's CSS. To address this,
+you can optionally include the following CSS and JavaScript to work around this problem until Microsoft issues a fix.
+*/
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+/* Internet Explorer 10 doesn't differentiate device width from viewport width,
+and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied */
+@-ms-viewport {
+    width: auto !important;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/**
+ *---------------------------------------------------------------
+ * BROWSER OVERRIDES
+ *---------------------------------------------------------------
+*/
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/** Remove the gap between images, videos, audio and canvas and the bottom of their containers */
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/** Remove default fieldset styles.*/
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/** Allow only vertical resizing of textareas.*/
+textarea {
+    resize: vertical;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+    max-width: 100%;
+}
+
+/** Fix link outlines after click */
+a,
+a:focus,
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/**
+ *---------------------------------------------------------------
+ * GLYPHICONS PRO FIX
+ *---------------------------------------------------------------
+*/
+.glyphicons,
+.glyphicons:before {
+    position: relative;
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.glyphicons {
+    padding-left: 0;
+}
+
+.glyphicons:before {
+    font-family: 'Glyphicons Regular';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Checked Fix for select picker
+.bootstrap-select i.check-mark.glyphicons.ok:before {
+    content: "\E207";
+}
+
+/**
+ *---------------------------------------------------------------
+ * GOOGLE MAP BOOTSTRAP FIX
+ *---------------------------------------------------------------
+*/
+.gm-style img {
+    max-width: none;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * BUTTON OVERRIDES
+ *---------------------------------------------------------------
+*/
+/* fix jumping group buttons */
+.btn-group.btn-group-solid .btn + .btn,
+.btn-group.btn-group-solid .btn + .btn-group.btn-group-solid,
+.btn-group.btn-group-solid .btn-group.btn-group-solid + .btn,
+.btn-group.btn-group-solid .btn-group.btn-group-solid + .btn-group.btn-group-solid {
+    margin-left: 0;
+}
+
+.btn-group-vertical.btn-group-solid > .btn + .btn,
+.btn-group-vertical.btn-group-solid > .btn + .btn-group,
+.btn-group-vertical.btn-group-solid > .btn-group + .btn,
+.btn-group-vertical.btn-group-solid > .btn-group + .btn-group {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.input-group .btn {
+    border-radius: 0 4px 4px 0;
+}
+
+/* Fix for weird hover problem */
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+    margin-left: 0;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * FORM OVERRIDES
+ *---------------------------------------------------------------
+*/
+/** Pretty Check Boxes */
+.form-group .prettycheckbox label,
+.form-group .prettyradio label {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0 5px;
+}
+
+.prettyblock .prettycheckbox,
+.prettyblock .prettyradio {
+    display: block;
+}
+
+.prettyblock .has-pretty-child {
+    margin-bottom: 20px;
+}
+
+.has-switch > div.switch-off {
+    margin-left: 0 !important;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * GOOGLE MAP BOOTSTRAP FIX
+ *---------------------------------------------------------------
+*/
+.dropdown-menu.text-select li.selected {
+    position: relative;
+}
+
+.dropdown-menu.text-select li.selected i.glyphicons {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    margin-top: 2.5px;
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * TABLE OVERRIDES
+ *---------------------------------------------------------------
+*/
+
+// Fix for width on data tables
+.dataTables_wrapper {
+    .table {
+        width: 100% !important;
+    }
+}
+
+.table li.divider {
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Bootstrap Table Info Replacement*/
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th {
+    background-color: #d9edf7;
+    border-color: #DDD;
+}
+
+/**
+ *---------------------------------------------------------------
+ * MODAL OVERRIDES
+ *---------------------------------------------------------------
+*/
+.form-tabs {
+    margin-bottom: 15px;
+}
+
+/**
+ *---------------------------------------------------------------
+ * SPINNER OVERRIDES
+ *---------------------------------------------------------------
+*/
+.spinner .input-group-sm {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.spinner .input-group-sm .btn {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/**
+ *---------------------------------------------------------------
+ * DATEPICKER OVERRIDES
+ *---------------------------------------------------------------
+*/
+.datepicker {
+    margin-top: 0;
+}
+
+/**
+ *---------------------------------------------------------------
+ * LABEL / BADGE OVERRIDES
+ *---------------------------------------------------------------
+*/
+/* fix badge position for navs */
+.nav.nav-pills > li > a > .badge {
+    margin-top: -2px;
+}
+
+.nav.nav-stacked > li > a > .badge {
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+/**
+ *---------------------------------------------------------------
+ * PAGE TOP LINK
+ *---------------------------------------------------------------
+*/
+body > #top-shortcut {
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+    z-index: 99999;
+}
+
+body > #top-shortcut a {
+    background-color: @gray;
+    color: #FFF;
+    border-radius: 2px !important;
+    font-size: 14px;
+    padding: 7px 9px;
+}
+
+body > #top-shortcut a:hover {
+    text-decoration: none;
+    background-color: lighten(@brand-primary, 5%);
+    transition: 250ms linear all;
+}
+
+/**
+ *---------------------------------------------------------------
+ * NO JS WARNING
+ *---------------------------------------------------------------
+*/
+.noscript {
+    color: #FFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+    border-width: 0 0 1px 0;
+    position: fixed;
+    top: 45px;
+    z-index: 10000;
+    width: 97.4%;
+    margin-left: 50px;
+}
+
+.noscript .notice-inner {
+    margin: 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+/**
+ *---------------------------------------------------------------
+ * IE WARNING
+ *---------------------------------------------------------------
+*/
+.ie-message {
+    color: #FFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+    border-width: 0 0 1px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    width: 97.4%;
+    margin-left: 50px;
+}
+
+.ie-message .notice-inner {
+    margin: 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.ie-message .notice-inner a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.ie-message .notice-inner a:hover {
+    text-decoration: none;
+}
+
+/**
+ *---------------------------------------------------------------
+ * USEFULL TOOLS
+ *---------------------------------------------------------------
+*/
+/** Clearfixes */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/** Margins */
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-lft-margin {
+    margin-left: 0 !important;
+}
+
+.no-rgt-margin {
+    margin-right: 0 !important;
+}
+
+/** Padding */
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-lft-padding {
+    padding-left: 0 !important;
+}
+
+.no-rgt-padding {
+    padding-right: 0 !important;
+}
+
+/**
+ *---------------------------------------------------------------
+ * MEDIA QUERY FIXES
+ *---------------------------------------------------------------
+*/
+/*  480px breakpoint 30em  */
+@media only screen and (max-width: 480px) {
+    #login-box {
+        width: 300px;
+    }
+}
+
+/*  600px breakpoint 38em  */
+@media only screen and (min-width: 600px) {
+
+}
+
+/*  768px breakpoint 48em  */
+@media only screen and (min-width: 768px) {
+
+}
+
+/*  992px breakpoint 62em  */
+@media only screen and (min-width: 992px) {
+
+}
+
+/*  1382px breakpoint 86em  */
+@media only screen and (min-width: 1382px) {
+
+}
+
+/*  high pixel ratio Retina Display = Load High Res Images  */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+}
+
+/* Style adjustments for high resolution devices */
+@media print,(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+
+}
+
+/*
+ * -----------------------
+ * Input Group Select Fix
+ * -----------------------
+ */
+.input-group .bootstrap-select.form-control {
+    z-index: inherit;
+}

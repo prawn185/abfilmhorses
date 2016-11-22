@@ -1,0 +1,59 @@
+
+/**
+ * ---------------------------------------------------------------
+ * VARIABLES AND MIXINS
+ * ---------------------------------------------------------------
+ * Include frontend variables
+ */
+
+    @import "../../../packages/netmatters/base/less/bootstrap/variables.less";
+    @import "../variables/frontend.less";
+    @import "../../../packages/netmatters/base/less/bootstrap/mixins.less";
+
+/**
+ *---------------------------------------------------------------
+ * CATEGORY PRODUCT LIST
+ *---------------------------------------------------------------
+*/
+
+    #product-list {
+        margin-bottom: -30px;
+
+        .item {
+            background-color: @white;
+            margin-bottom: 30px;
+
+            .bg-cover {
+                height: 188px;
+                display: block;
+
+                @media (max-width: @screen-xs-max) {
+                    height: 213px;
+                }
+            }
+
+            > .row {
+                margin: 0;
+
+                > div {
+                    padding: 0;
+                }
+            }
+
+            .copy {
+                padding: 10px 20px 23px 20px;
+                margin: 0;
+
+                h4 {
+                    text-transform: uppercase;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: bold;
+                }
+
+                p {
+                    line-height: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }

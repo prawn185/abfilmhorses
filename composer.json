@@ -1,0 +1,117 @@
+{
+    "name": "Netmatters/DemoSysflow",
+    "description": "A base for Sysflow projects to build from.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "repositories": [ { "type": "composer", "url": "https://packages.netmatters.co.uk/" } ],
+    "require": {
+        "laravel/framework": "4.2.*",
+
+        "doctrine/dbal": "v2.4.2",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "barryvdh/laravel-dompdf": "0.4.*",
+        "barryvdh/laravel-snappy": "0.1.x",
+        "baum/baum": "~1.0",
+        "itsgoingd/clockwork": "1.*",
+        "iveoles/image": "dev-master",
+        "tedivm/fetch": "0.5.*",
+        "facebook/php-sdk": "3.2.*",
+        "thujohn/twitter": "dev-master#7dba3c445973cba8dc1d43c5e80c31f9a6c1deab",
+        "roumen/feed": "2.8.1",
+        "mailchimp/mailchimp": "2.0.*",
+        "soapbox/laravel-formatter": "2.x",
+        "maatwebsite/excel": "1.*",
+        "ignited/laravel-omnipay": "1.1.*",
+        "omnipay/omnipay": "*",
+        "stripe/stripe-php": "1.8.3",
+        "roumen/sitemap": "2.4.15",
+        "guzzlehttp/guzzle": "~4.0",
+        "fzaninotto/faker": "1.5.*@dev",
+        "nicolaslopezj/searchable" : "1.0.*",
+        "laracasts/commander": "1.1.*",
+        "laracasts/presenter": "0.1.*",
+        "laracasts/validation": "1.*",
+        "laracasts/utilities": "~1.0",
+        "mews/captcha": "1.0.1",
+        "bkwld/auto-publish": "~1.0",
+        "leafo/lessphp": "0.4.0",
+        "imagecow/imagecow"          : "1.5.*",
+
+        "netmatters/account":"4.1.*",
+        "netmatters/address":"4.0.*",
+        "netmatters/ads":"4.0.*",
+        "netmatters/article":"4.0.*",
+        "netmatters/assets":"4.0.*",
+        "netmatters/base":"4.0.*",
+        "netmatters/block":"4.0.*",
+        "netmatters/booking":"4.0.*",
+        "netmatters/cart":"4.0.*",
+        "netmatters/contact":"4.0.*",
+        "netmatters/document":"4.0.*",
+        "netmatters/email":"4.0.*",
+        "netmatters/enquiry":"4.0.*",
+        "netmatters/event":"4.0.*",
+        "netmatters/gallery":"4.0.*",
+        "netmatters/history":"4.0.*",
+        "netmatters/image":"5.1.6",
+        "netmatters/knowledgebase":"4.0.*",
+        "netmatters/membership":"4.0.*",
+        "netmatters/menu":"4.0.*",
+        "netmatters/newsletter":"4.0.*",
+        "netmatters/note":"4.0.*",
+        "netmatters/order":"4.0.*",
+        "netmatters/page":"4.0.*",
+        "netmatters/product":"4.0.*",
+        "netmatters/quote":"4.0.*",
+        "netmatters/related":"4.0.*",
+        "netmatters/site":"4.0.*",
+        "netmatters/sitemap":"4.0.*",
+        "netmatters/social":"4.0.*",
+        "netmatters/task":"4.0.*",
+        "netmatters/team":"4.0.*",
+        "netmatters/testimonial":"4.0.*",
+        "netmatters/user":"4.0.*",
+        "netmatters/widget":"4.0.*"
+    },
+    "require-dev": {
+        "way/generators": "2.*",
+        "sebastian/finder-facade": "1.1.*",
+        "phploc/phploc": "~2.0",
+        "pdepend/pdepend": "~1.1",
+        "phpmd/phpmd": "~1.4",
+        "sebastian/phpcpd": "*",
+        "phpunit/phpunit": "4.4.*",
+        "codeception/codeception": "2.*",
+        "mayflower/php-codebrowser": "~1.1",
+        "squizlabs/php_codesniffer": "~1.4"
+    },
+    "autoload": {
+        "classmap": [
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds"
+        ],
+        "psr-4": {
+            "Sysflow\\": "app/Sysflow"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize",
+            "php artisan dump-autoload",
+            "composer show -i > version"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable"
+}

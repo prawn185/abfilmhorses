@@ -1,0 +1,445 @@
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Anti Caching Assets
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)__(\d{1,10})\.(js|css|png|jpg|gif)$ $1.$3 [L]
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Robots.txt
+    RewriteRule robots.txt$ robots.php [L,NC]
+
+    # Block Bad Bots & Scrapers
+    SetEnvIfNoCase User-Agent "Aboundex" bad_bot
+    SetEnvIfNoCase User-Agent "80legs" bad_bot
+    SetEnvIfNoCase User-Agent "360Spider" bad_bot
+    SetEnvIfNoCase User-Agent "^Java" bad_bot
+    SetEnvIfNoCase User-Agent "^Cogentbot" bad_bot
+    SetEnvIfNoCase User-Agent "^Alexibot" bad_bot
+    SetEnvIfNoCase User-Agent "^asterias" bad_bot
+    SetEnvIfNoCase User-Agent "^attach" bad_bot
+    SetEnvIfNoCase User-Agent "^BackDoorBot" bad_bot
+    SetEnvIfNoCase User-Agent "^BackWeb" bad_bot
+    SetEnvIfNoCase User-Agent "Bandit" bad_bot
+    SetEnvIfNoCase User-Agent "^BatchFTP" bad_bot
+    SetEnvIfNoCase User-Agent "^Bigfoot" bad_bot
+    SetEnvIfNoCase User-Agent "^Black.Hole" bad_bot
+    SetEnvIfNoCase User-Agent "^BlackWidow" bad_bot
+    SetEnvIfNoCase User-Agent "^BlowFish" bad_bot
+    SetEnvIfNoCase User-Agent "^BotALot" bad_bot
+    SetEnvIfNoCase User-Agent "Buddy" bad_bot
+    SetEnvIfNoCase User-Agent "^BuiltBotTough" bad_bot
+    SetEnvIfNoCase User-Agent "^Bullseye" bad_bot
+    SetEnvIfNoCase User-Agent "^BunnySlippers" bad_bot
+    SetEnvIfNoCase User-Agent "^Cegbfeieh" bad_bot
+    SetEnvIfNoCase User-Agent "^CheeseBot" bad_bot
+    SetEnvIfNoCase User-Agent "^CherryPicker" bad_bot
+    SetEnvIfNoCase User-Agent "^ChinaClaw" bad_bot
+    SetEnvIfNoCase User-Agent "Collector" bad_bot
+    SetEnvIfNoCase User-Agent "Copier" bad_bot
+    SetEnvIfNoCase User-Agent "^CopyRightCheck" bad_bot
+    SetEnvIfNoCase User-Agent "^cosmos" bad_bot
+    SetEnvIfNoCase User-Agent "^Crescent" bad_bot
+    SetEnvIfNoCase User-Agent "^Custo" bad_bot
+    SetEnvIfNoCase User-Agent "^AIBOT" bad_bot
+    SetEnvIfNoCase User-Agent "^DISCo" bad_bot
+    SetEnvIfNoCase User-Agent "^DIIbot" bad_bot
+    SetEnvIfNoCase User-Agent "^DittoSpyder" bad_bot
+    SetEnvIfNoCase User-Agent "^Download\ Demon" bad_bot
+    SetEnvIfNoCase User-Agent "^Download\ Devil" bad_bot
+    SetEnvIfNoCase User-Agent "^Download\ Wonder" bad_bot
+    SetEnvIfNoCase User-Agent "^dragonfly" bad_bot
+    SetEnvIfNoCase User-Agent "^Drip" bad_bot
+    SetEnvIfNoCase User-Agent "^eCatch" bad_bot
+    SetEnvIfNoCase User-Agent "^EasyDL" bad_bot
+    SetEnvIfNoCase User-Agent "^ebingbong" bad_bot
+    SetEnvIfNoCase User-Agent "^EirGrabber" bad_bot
+    SetEnvIfNoCase User-Agent "^EmailCollector" bad_bot
+    SetEnvIfNoCase User-Agent "^EmailSiphon" bad_bot
+    SetEnvIfNoCase User-Agent "^EmailWolf" bad_bot
+    SetEnvIfNoCase User-Agent "^EroCrawler" bad_bot
+    SetEnvIfNoCase User-Agent "^Exabot" bad_bot
+    SetEnvIfNoCase User-Agent "^Express\ WebPictures" bad_bot
+    SetEnvIfNoCase User-Agent "Extractor" bad_bot
+    SetEnvIfNoCase User-Agent "^EyeNetIE" bad_bot
+    SetEnvIfNoCase User-Agent "^Foobot" bad_bot
+    SetEnvIfNoCase User-Agent "^flunky" bad_bot
+    SetEnvIfNoCase User-Agent "^FrontPage" bad_bot
+    SetEnvIfNoCase User-Agent "^Go-Ahead-Got-It" bad_bot
+    SetEnvIfNoCase User-Agent "^gotit" bad_bot
+    SetEnvIfNoCase User-Agent "^GrabNet" bad_bot
+    SetEnvIfNoCase User-Agent "^Grafula" bad_bot
+    SetEnvIfNoCase User-Agent "^Harvest" bad_bot
+    SetEnvIfNoCase User-Agent "^hloader" bad_bot
+    SetEnvIfNoCase User-Agent "^HMView" bad_bot
+    SetEnvIfNoCase User-Agent "^HTTrack" bad_bot
+    SetEnvIfNoCase User-Agent "^humanlinks" bad_bot
+    SetEnvIfNoCase User-Agent "^IlseBot" bad_bot
+    SetEnvIfNoCase User-Agent "^Image\ Stripper" bad_bot
+    SetEnvIfNoCase User-Agent "^Image\ Sucker" bad_bot
+    SetEnvIfNoCase User-Agent "Indy\ Library" bad_bot
+    SetEnvIfNoCase User-Agent "^InfoNaviRobot" bad_bot
+    SetEnvIfNoCase User-Agent "^InfoTekies" bad_bot
+    SetEnvIfNoCase User-Agent "^Intelliseek" bad_bot
+    SetEnvIfNoCase User-Agent "^InterGET" bad_bot
+    SetEnvIfNoCase User-Agent "^Internet\ Ninja" bad_bot
+    SetEnvIfNoCase User-Agent "^Iria" bad_bot
+    SetEnvIfNoCase User-Agent "^Jakarta" bad_bot
+    SetEnvIfNoCase User-Agent "^JennyBot" bad_bot
+    SetEnvIfNoCase User-Agent "^JetCar" bad_bot
+    SetEnvIfNoCase User-Agent "^JOC" bad_bot
+    SetEnvIfNoCase User-Agent "^JustView" bad_bot
+    SetEnvIfNoCase User-Agent "^Jyxobot" bad_bot
+    SetEnvIfNoCase User-Agent "^Kenjin.Spider" bad_bot
+    SetEnvIfNoCase User-Agent "^Keyword.Density" bad_bot
+    SetEnvIfNoCase User-Agent "^larbin" bad_bot
+    SetEnvIfNoCase User-Agent "^LexiBot" bad_bot
+    SetEnvIfNoCase User-Agent "^lftp" bad_bot
+    SetEnvIfNoCase User-Agent "^libWeb/clsHTTP" bad_bot
+    SetEnvIfNoCase User-Agent "^likse" bad_bot
+    SetEnvIfNoCase User-Agent "^LinkextractorPro" bad_bot
+    SetEnvIfNoCase User-Agent "^LinkScan/8.1a.Unix" bad_bot
+    SetEnvIfNoCase User-Agent "^LNSpiderguy" bad_bot
+    SetEnvIfNoCase User-Agent "^LinkWalker" bad_bot
+    SetEnvIfNoCase User-Agent "^lwp-trivial" bad_bot
+    SetEnvIfNoCase User-Agent "^LWP::Simple" bad_bot
+    SetEnvIfNoCase User-Agent "^Magnet" bad_bot
+    SetEnvIfNoCase User-Agent "^Mag-Net" bad_bot
+    SetEnvIfNoCase User-Agent "^MarkWatch" bad_bot
+    SetEnvIfNoCase User-Agent "^Mass\ Downloader" bad_bot
+    SetEnvIfNoCase User-Agent "^Mata.Hari" bad_bot
+    SetEnvIfNoCase User-Agent "^Memo" bad_bot
+    SetEnvIfNoCase User-Agent "^Microsoft.URL" bad_bot
+    SetEnvIfNoCase User-Agent "^Microsoft\ URL\ Control" bad_bot
+    SetEnvIfNoCase User-Agent "^MIDown\ tool" bad_bot
+    SetEnvIfNoCase User-Agent "^MIIxpc" bad_bot
+    SetEnvIfNoCase User-Agent "^Mirror" bad_bot
+    SetEnvIfNoCase User-Agent "^Missigua\ Locator" bad_bot
+    SetEnvIfNoCase User-Agent "^Mister\ PiX" bad_bot
+    SetEnvIfNoCase User-Agent "^moget" bad_bot
+    SetEnvIfNoCase User-Agent "^Mozilla/3.Mozilla/2.01" bad_bot
+    SetEnvIfNoCase User-Agent "^Mozilla.*NEWT" bad_bot
+    SetEnvIfNoCase User-Agent "^NAMEPROTECT" bad_bot
+    SetEnvIfNoCase User-Agent "^Navroad" bad_bot
+    SetEnvIfNoCase User-Agent "^NearSite" bad_bot
+    SetEnvIfNoCase User-Agent "^NetAnts" bad_bot
+    SetEnvIfNoCase User-Agent "^Netcraft" bad_bot
+    SetEnvIfNoCase User-Agent "^NetMechanic" bad_bot
+    SetEnvIfNoCase User-Agent "^NetSpider" bad_bot
+    SetEnvIfNoCase User-Agent "^Net\ Vampire" bad_bot
+    SetEnvIfNoCase User-Agent "^NetZIP" bad_bot
+    SetEnvIfNoCase User-Agent "^NextGenSearchBot" bad_bot
+    SetEnvIfNoCase User-Agent "^NG" bad_bot
+    SetEnvIfNoCase User-Agent "^NICErsPRO" bad_bot
+    SetEnvIfNoCase User-Agent "^niki-bot" bad_bot
+    SetEnvIfNoCase User-Agent "^NimbleCrawler" bad_bot
+    SetEnvIfNoCase User-Agent "^Ninja" bad_bot
+    SetEnvIfNoCase User-Agent "^NPbot" bad_bot
+    SetEnvIfNoCase User-Agent "^Octopus" bad_bot
+    SetEnvIfNoCase User-Agent "^Offline\ Explorer" bad_bot
+    SetEnvIfNoCase User-Agent "^Offline\ Navigator" bad_bot
+    SetEnvIfNoCase User-Agent "^Openfind" bad_bot
+    SetEnvIfNoCase User-Agent "^OutfoxBot" bad_bot
+    SetEnvIfNoCase User-Agent "^PageGrabber" bad_bot
+    SetEnvIfNoCase User-Agent "^Papa\ Foto" bad_bot
+    SetEnvIfNoCase User-Agent "^pavuk" bad_bot
+    SetEnvIfNoCase User-Agent "^pcBrowser" bad_bot
+    SetEnvIfNoCase User-Agent "^PHP\ version\ tracker" bad_bot
+    SetEnvIfNoCase User-Agent "^Pockey" bad_bot
+    SetEnvIfNoCase User-Agent "^ProPowerBot/2.14" bad_bot
+    SetEnvIfNoCase User-Agent "^ProWebWalker" bad_bot
+    SetEnvIfNoCase User-Agent "^psbot" bad_bot
+    SetEnvIfNoCase User-Agent "^Pump" bad_bot
+    SetEnvIfNoCase User-Agent "^QueryN.Metasearch" bad_bot
+    SetEnvIfNoCase User-Agent "^RealDownload" bad_bot
+    SetEnvIfNoCase User-Agent "Reaper" bad_bot
+    SetEnvIfNoCase User-Agent "Recorder" bad_bot
+    SetEnvIfNoCase User-Agent "^ReGet" bad_bot
+    SetEnvIfNoCase User-Agent "^RepoMonkey" bad_bot
+    SetEnvIfNoCase User-Agent "^RMA" bad_bot
+    SetEnvIfNoCase User-Agent "Siphon" bad_bot
+    SetEnvIfNoCase User-Agent "^SiteSnagger" bad_bot
+    SetEnvIfNoCase User-Agent "^SlySearch" bad_bot
+    SetEnvIfNoCase User-Agent "^SmartDownload" bad_bot
+    SetEnvIfNoCase User-Agent "^Snake" bad_bot
+    SetEnvIfNoCase User-Agent "^Snapbot" bad_bot
+    SetEnvIfNoCase User-Agent "^Snoopy" bad_bot
+    SetEnvIfNoCase User-Agent "^sogou" bad_bot
+    SetEnvIfNoCase User-Agent "^SpaceBison" bad_bot
+    SetEnvIfNoCase User-Agent "^SpankBot" bad_bot
+    SetEnvIfNoCase User-Agent "^spanner" bad_bot
+    SetEnvIfNoCase User-Agent "^Sqworm" bad_bot
+    SetEnvIfNoCase User-Agent "Stripper" bad_bot
+    SetEnvIfNoCase User-Agent "Sucker" bad_bot
+    SetEnvIfNoCase User-Agent "^SuperBot" bad_bot
+    SetEnvIfNoCase User-Agent "^SuperHTTP" bad_bot
+    SetEnvIfNoCase User-Agent "^Surfbot" bad_bot
+    SetEnvIfNoCase User-Agent "^suzuran" bad_bot
+    SetEnvIfNoCase User-Agent "^Szukacz/1.4" bad_bot
+    SetEnvIfNoCase User-Agent "^tAkeOut" bad_bot
+    SetEnvIfNoCase User-Agent "^Teleport" bad_bot
+    SetEnvIfNoCase User-Agent "^Telesoft" bad_bot
+    SetEnvIfNoCase User-Agent "^TurnitinBot/1.5" bad_bot
+    SetEnvIfNoCase User-Agent "^The.Intraformant" bad_bot
+    SetEnvIfNoCase User-Agent "^TheNomad" bad_bot
+    SetEnvIfNoCase User-Agent "^TightTwatBot" bad_bot
+    SetEnvIfNoCase User-Agent "^Titan" bad_bot
+    SetEnvIfNoCase User-Agent "^True_Robot" bad_bot
+    SetEnvIfNoCase User-Agent "^turingos" bad_bot
+    SetEnvIfNoCase User-Agent "^TurnitinBot" bad_bot
+    SetEnvIfNoCase User-Agent "^URLy.Warning" bad_bot
+    SetEnvIfNoCase User-Agent "^Vacuum" bad_bot
+    SetEnvIfNoCase User-Agent "^VCI" bad_bot
+    SetEnvIfNoCase User-Agent "^VoidEYE" bad_bot
+    SetEnvIfNoCase User-Agent "^Web\ Image\ Collector" bad_bot
+    SetEnvIfNoCase User-Agent "^Web\ Sucker" bad_bot
+    SetEnvIfNoCase User-Agent "^WebAuto" bad_bot
+    SetEnvIfNoCase User-Agent "^WebBandit" bad_bot
+    SetEnvIfNoCase User-Agent "^Webclipping.com" bad_bot
+    SetEnvIfNoCase User-Agent "^WebCopier" bad_bot
+    SetEnvIfNoCase User-Agent "^WebEMailExtrac.*" bad_bot
+    SetEnvIfNoCase User-Agent "^WebEnhancer" bad_bot
+    SetEnvIfNoCase User-Agent "^WebFetch" bad_bot
+    SetEnvIfNoCase User-Agent "^WebGo\ IS" bad_bot
+    SetEnvIfNoCase User-Agent "^Web.Image.Collector" bad_bot
+    SetEnvIfNoCase User-Agent "^WebLeacher" bad_bot
+    SetEnvIfNoCase User-Agent "^WebmasterWorldForumBot" bad_bot
+    SetEnvIfNoCase User-Agent "^WebReaper" bad_bot
+    SetEnvIfNoCase User-Agent "^WebSauger" bad_bot
+    SetEnvIfNoCase User-Agent "^Website\ eXtractor" bad_bot
+    SetEnvIfNoCase User-Agent "^Website\ Quester" bad_bot
+    SetEnvIfNoCase User-Agent "^Webster" bad_bot
+    SetEnvIfNoCase User-Agent "^WebStripper" bad_bot
+    SetEnvIfNoCase User-Agent "^WebWhacker" bad_bot
+    SetEnvIfNoCase User-Agent "^WebZIP" bad_bot
+    SetEnvIfNoCase User-Agent "Whacker" bad_bot
+    SetEnvIfNoCase User-Agent "^Widow" bad_bot
+    SetEnvIfNoCase User-Agent "^WISENutbot" bad_bot
+    SetEnvIfNoCase User-Agent "^WWWOFFLE" bad_bot
+    SetEnvIfNoCase User-Agent "^WWW-Collector-E" bad_bot
+    SetEnvIfNoCase User-Agent "^Xaldon" bad_bot
+    SetEnvIfNoCase User-Agent "^Zeus" bad_bot
+    SetEnvIfNoCase User-Agent "ZmEu" bad_bot
+    SetEnvIfNoCase User-Agent "^Zyborg" bad_bot
+
+
+
+    ## STOP REFERRER SPAM 
+    RewriteCond %{HTTP_REFERER} 100dollars-seo\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} 12masterov\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} 4webmasters\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} 7makemoneyonline\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} acads\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} adcash\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} adviceforum\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} affordablewebsitesandmobileapps\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} akuhni\.by [NC,OR] 
+    RewriteCond %{HTTP_REFERER} allwomen\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} alpharma\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} altermix\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} amt-k\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} anal-acrobats\.hol\.es [NC,OR] 
+    RewriteCond %{HTTP_REFERER} android-style\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} anticrawler\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} arkkivoltti\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} aruplighting\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} baladur\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} bard-real\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} best-seo-offer\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} best-seo-solution\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} bestmobilityscooterstoday\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} bestwebsitesawards\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} billiard-classic\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} blackhatworth\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} blue-square\.biz [NC,OR] 
+    RewriteCond %{HTTP_REFERER} bmw\.afora\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} brakehawk\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} brothers-smaller\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} buttons-for-website\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} buttons-for-your-website\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} buy-cheap-online\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} buy-forum\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cardiosport\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cartechnic\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cenokos\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cenoval\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ci\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cityadspix\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} cubook\.supernew\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} customsua\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} darodar\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} delfin-aqua\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} detskie-konstruktory\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} dipstar\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} djekxa\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} dojki-hd\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} domination\.ml [NC,OR] 
+    RewriteCond %{HTTP_REFERER} doska-vsem\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} dostavka-v-krym\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} drupa\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} dvr\.biz\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} e-kwiaciarz\.pl [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ecomp3\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} econom\.co [NC,OR] 
+    RewriteCond %{HTTP_REFERER} edakgfvwql\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} elmifarhangi\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} este-line\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} euromasterclass\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} europages\.com\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} eurosamodelki\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} event-tracking\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} forum20\.smailik\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} forum69\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} free-share-buttons\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} free-social-buttons\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} freewhatsappload\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} generalporn\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} germes-trans\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} get-free-traffic-now\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ghazel\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} girlporn\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} gkvector\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} gobongo\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} goodprotein\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} googlsucks\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} guardlink\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} hulfingtonpost\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} humanorightswatch\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} hundejo\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} hvd-store\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ico\.re [NC,OR] 
+    RewriteCond %{HTTP_REFERER} igru-xbox\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} iloveitaly\.ro [NC,OR] 
+    RewriteCond %{HTTP_REFERER} iloveitaly\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ilovevitaly\.co [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ilovevitaly\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ilovevitaly\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ilovevitaly\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ilovevitaly\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} iminent\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} imperiafilm\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} iskalko\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ispaniya-costa-blanca\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} it-max\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} jjbabskoe\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kabbalah-red-bracelets\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kambasoft\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kazrent\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kino-fun\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kino-key\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} kinopolet\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} laxdrills\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} littleberry\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} luxup\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} makemoneyonline\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} maridan\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} masterseek\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} mebelcomplekt\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} mebeldekor\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} med-zdorovie\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} minegam\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} mirobuvi\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} msk\.afora\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} myftpupload\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} niki-mlt\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} novosti-hi-tech\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} o-o-6-o-o\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} o-o-8-o-o\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ok\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} onlywoman\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ooo-olni\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ozas\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} palvira\.com\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} photokitchendesign\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} pornhub-forum\.ga [NC,OR] 
+    RewriteCond %{HTTP_REFERER} pornhub-forum\.uni\.me [NC,OR] 
+    RewriteCond %{HTTP_REFERER} pornhub-ru\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} pornoforadult\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} pozdravleniya-c\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} priceg\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} prodvigator\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} psa48\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} qitt\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ranksonic\.info [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ranksonic\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} rapidgator-porn\.ga [NC,OR] 
+    RewriteCond %{HTTP_REFERER} research\.ifmo\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} resellerclub\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} sady-urala\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} sanjosestartups\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} savetubevideo\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} screentoolkit\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} search-error\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} semalt\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} seo-smm\.kz [NC,OR] 
+    RewriteCond %{HTTP_REFERER} seoexperimenty\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} sexyteens\.hol\.es [NC,OR] 
+    RewriteCond %{HTTP_REFERER} shop\.xz618\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} simple-share-buttons\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} slftsdybbg\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} slkrm\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} social-buttons\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} socialseet\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} sohoindia\.net [NC,OR] 
+    RewriteCond %{HTTP_REFERER} spb\.afora\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} spravka130\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} superiends\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} tattooha\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} tedxrj\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} theguardlan\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} toyota\.7zap\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} trafficmonetize\.org [NC,OR] 
+    RewriteCond %{HTTP_REFERER} trion\.od\.ua [NC,OR] 
+    RewriteCond %{HTTP_REFERER} vodkoved\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} webmaster-traffic\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} websites-reviews\.com [NC,OR] 
+    RewriteCond %{HTTP_REFERER} websocial\.me [NC,OR] 
+    RewriteCond %{HTTP_REFERER} ykecwqlixx\.ru [NC,OR] 
+    RewriteCond %{HTTP_REFERER} youporn-forum\.ga [NC,OR] 
+    RewriteCond %{HTTP_REFERER} youporn-forum\.uni\.me [NC,OR] 
+    RewriteCond %{HTTP_REFERER} zastroyka\.org [NC] 
+    RewriteRule .* - [F]
+
+
+    # Vulnerability Scanners
+    SetEnvIfNoCase User-Agent "Acunetix" bad_bot
+    SetEnvIfNoCase User-Agent "FHscan" bad_bot
+
+    # Aggressive Chinese Search Engine
+    SetEnvIfNoCase User-Agent "Baiduspider" bad_bot
+
+    # Aggressive Russian Search Engine
+    SetEnvIfNoCase User-Agent "Yandex" bad_bot
+
+
+    <Limit GET POST HEAD>
+    Order Allow,Deny
+    Allow from all
+
+    # Cyveillance
+    deny from 38.100.19.8/29
+    deny from 38.100.21.0/24
+    deny from 38.100.41.64/26
+    deny from 38.105.71.0/25
+    deny from 38.105.83.0/27
+    deny from 38.112.21.140/30
+    deny from 38.118.42.32/29
+    deny from 65.213.208.128/27
+    deny from 65.222.176.96/27
+    deny from 65.222.185.72/29
+
+    Deny from env=bad_bot
+    </Limit>
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

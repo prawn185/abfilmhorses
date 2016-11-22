@@ -1,0 +1,366 @@
+
+/**
+ *---------------------------------------------------------------
+ * FORM
+ *---------------------------------------------------------------
+*/
+.error-popup {
+    color: #B94A48;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+// Form title
+.form-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .timestamps {
+        font-size: 11px;
+        font-weight: bold;
+        color: @gray;
+        margin-left: 2px;
+    }
+    .form-title h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+
+        &.highlight {
+            color: @brand-primary;
+        }
+    }
+    .action-buttons {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.form-horizontal .form-group label {
+    text-align: left !important;
+    padding-bottom: 5px;
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+input[type=text].form-control,
+input[type=search],
+.form-control.input-sm,
+textarea.form-control {
+    box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    border-radius: 0;
+}
+
+
+.bootstrap-select.btn-group .dropdown-menu.inner {
+    text-transform: capitalize;
+}
+
+.bootstrap-select .btn-default,
+.bootstrap-select .btn-default:active,
+.bootstrap-select .btn-default:focus {
+    background: #FFF;
+    color: @text-color !important;
+    border-radius: 0;
+    box-shadow: inset 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    border: 1px solid @input-border;
+}
+
+
+/**
+ * Bootstrap select disabled style
+ */
+.bootstrap-select {
+    .btn-default.disabled,
+    .btn-default.disabled.active,
+    .btn-default.disabled:active,
+    .btn-default.disabled:focus,
+    .btn-default.disabled:hover,
+    .btn-default[disabled],
+    .btn-default[disabled].active,
+    .btn-default[disabled]:active,
+    .btn-default[disabled]:focus,
+    .btn-default[disabled]:hover,
+    fieldset[disabled] .btn-default,
+    fieldset[disabled] .btn-default.active,
+    fieldset[disabled] .btn-default:active,
+    fieldset[disabled] .btn-default:focus,
+    fieldset[disabled] .btn-default:hover {
+        cursor: not-allowed;
+        background-color: #EEE;
+        border-color: #E5E5E5;
+    }
+}
+
+.bootstrap-select.form-control {
+    margin-bottom: 0;
+}
+
+.input-group-btn-space:last-child {
+    > .btn {
+        margin-left: (30px / 2);
+    }
+}
+
+.pop-settings-modal {
+    margin-left: 15px;
+}
+
+
+/**
+ * Checkbox and radio styles
+ */
+.checkbox-styled:not(ie8),
+.radio-styled:not(ie8) {
+    position: relative;
+    margin-top: 0;
+
+    input ~ span {
+        position: relative;
+        padding-left: 30px;
+        display: inline-block;
+        cursor: pointer;
+        vertical-align: text-top;
+    }
+
+    input ~ span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 20px;
+        height: 20px;
+        border: 2px solid @gray;
+    }
+
+    // In order to support the browser's form validation feedback, powered by the
+    // `required` attribute, we have to "hide" the inputs via `opacity`. We cannot
+    // use `display: none;` or `visibility: hidden;` as that also hides the popover.
+    // This way, we ensure a DOM element is visible to position the popover from.
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        z-index: -1;
+        .opacity(0);
+    }
+
+    // Re-align label
+    label {
+        padding-left: 0;
+    }
+
+    // Re-align inline elements
+    &.radio-inline,
+    &.checkbox-inline {
+        padding-left: 0;
+    }
+
+    // Disabled style
+    &.disabled,
+    input[disabled],
+    input[readonly] {
+        ~ span:before {
+            border-color: @gray-lighter;
+        }
+
+        &:checked ~ span:before {
+            border-color: @gray-lighter;
+        }
+        &:checked ~ span:after {
+            background-color: @gray-lighter;
+        }
+    }
+}
+
+// Checkbox specific styles
+.checkbox-styled:not(ie8) {
+
+    // Checkbox border
+    input ~ span:before {
+        .transition(all 0.2s ease-in-out);
+    }
+
+    // Checkbox selected
+    input:checked ~ span:before {
+        .rotate(-45deg);
+        height: 10px;
+        border-color: @brand-primary;
+        border-top-style: none;
+        border-right-style: none;
+    }
+}
+
+// Checkbox specific styles
+.radio-styled:not(ie8) {
+
+    // Radio border
+    input ~ span:before {
+        top: 0;
+        border-radius: 50%;
+        .transition(all 0.15s ease-in-out);
+    }
+
+    // Radio border selected
+    input:checked ~ span:before {
+        border-color: @brand-primary;
+    }
+
+    // Radio inner circ
+    input ~ span:after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 1;
+        width: 0;
+        height: 0;
+        background-color: @brand-primary;
+        border-radius: 50%;
+        .transition(all 0.15s ease-in-out);
+    }
+
+    // Radio inner circle selected
+    input:checked ~ span:after {
+        left: 5px;
+        top: 5px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+/*
+ * Role styles
+ */
+.roles {
+    .panel-heading {
+        font-weight: 700;
+        border-bottom: none;
+        color: #555;
+        text-transform: initial;
+    }
+
+    .permission-group {
+        padding: 0;
+        margin: 0;
+
+        .permission {
+            padding: 5px 10px 5px 20px;
+            border-bottom: 1px dashed #e2e2e2;
+
+            label {
+                font-size: 12px;
+            }
+            .checkbox {
+                padding: 0;
+            }
+            &:last-child {
+                border-bottom: none;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+.form-control {
+    &.has-error {
+        border-color: @red;
+    }
+}
+
+.control-label {
+    &.has-error {
+        color: @red;
+    }
+}
+
+.error-popup {
+    &.has-error {
+        position: absolute;
+        top: -32px;
+        right: (@grid-gutter-width / 2);
+        line-height: 34px;
+        height: 32px;
+        padding: 0 12px;
+        background-color: @red;
+        color: @white;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: .4px;
+    }
+}
+
+
+/**
+ *---------------------------------------------------------------
+ * SMALL MOBILE - Max Width: 480px breakpoint 30em
+ *---------------------------------------------------------------
+*/
+@media only screen and (max-width: 480px) {
+    .form-title h1,
+    .form-title .action-buttons {
+        font-size: 1.3em;
+    }
+
+    .form-title h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+/**
+ *---------------------------------------------------------------
+ * MOBILE - Min Width: 600px breakpoint 38em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 600px) {
+    .form-title h1 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+/**
+ *---------------------------------------------------------------
+ * TABLET - Min Width: 768px breakpoint 48em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 768px) {
+
+}
+
+/**
+ *---------------------------------------------------------------
+ * SMALL DESKTOP- Min Width: 992px breakpoint 62em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 992px) {
+
+    .form-title h1 {
+        margin-bottom: 0;
+        font-size: 24px;
+    }
+}
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Min Width: 1382px breakpoint 86em
+ *---------------------------------------------------------------
+*/
+@media only screen and (min-width: 1382px) {
+
+}
+
+/**
+ *---------------------------------------------------------------
+ * LARGE DESKTOP- Retina Display
+ *---------------------------------------------------------------
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+}
